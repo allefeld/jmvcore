@@ -1,9 +1,23 @@
 
 #' @method knit_print Table
 #' @export
-#' @importFrom knitr knit_print
+#' @importFrom knitr asis_output kable
 knit_print.Table <- function(table, ...) {
-    paste0('Table ', table$title, ' goes here')
+    col.names <- unname(unlist(
+        lapply(
+            table$columns,
+            function(column) {
+                if (column$visible) column$title
+            }
+        )
+    ))
+    md <- kable(
+        as.data.frame(table),
+        col.names = col.names,
+        row.names = FALSE,
+        caption = table$title
+    )
+    asis_output(paste(md, collapse = "\n"))
 }
 
 #' @method knit_print Image
@@ -15,14 +29,17 @@ knit_print.Image <- function(image, ...) {
 
 #' @method knit_print Group
 #' @export
-#' @importFrom knitr knit_print
+#' @importFrom knitr knit_print asis_output
 knit_print.Group <- function(group, ...) {
-    items <- character()
-    for (item in group$items) {
-        if (item$visible)
-            items <- c(items, knit_print(item))
-    }
-    paste0(items, collapse='\n')
+    md <- unname(unlist(
+        lapply(
+            group$items,
+            function(item) {
+                if (item$visible) knit_print(item)
+            }
+        )
+    ))
+    asis_output(paste(md, collapse = "\n\n"))
 }
 
 #' @method knit_print Array

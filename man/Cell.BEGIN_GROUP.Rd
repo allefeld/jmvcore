@@ -8,7 +8,17 @@
 \alias{Cell.NEGATIVE}
 \alias{Cell.INDENTED}
 \title{Constants to specify formatting of Table cells}
-\format{An object of class \code{numeric} of length 1.}
+\format{
+An object of class \code{numeric} of length 1.
+
+An object of class \code{numeric} of length 1.
+
+An object of class \code{numeric} of length 1.
+
+An object of class \code{numeric} of length 1.
+
+An object of class \code{numeric} of length 1.
+}
 \usage{
 Cell.BEGIN_GROUP
 

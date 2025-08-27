@@ -2,7 +2,6 @@
 % Please edit documentation in R/action.R, R/analysis.R, R/array.R, R/column.R,
 %   R/group.R, R/html.R, R/image.R, R/notice.R, R/output.R, R/preformatted.R,
 %   R/state.R, R/table.R
-\docType{data}
 \name{Action}
 \alias{Action}
 \alias{Analysis}
@@ -17,33 +16,2227 @@
 \alias{State}
 \alias{Table}
 \title{the jmvcore Object classes}
-\format{An object of class \code{R6ClassGenerator} of length 25.}
-\usage{
-Action
-
-Analysis
-
-Array
-
-Column
-
-Group
-
-Html
-
-Image
-
-Notice
-
-Output
-
-Preformatted
-
-State
-
-Table
-}
 \description{
 the jmvcore Object classes
+
+the jmvcore Object classes
 }
-\keyword{datasets}
+\section{Super class}{
+\code{jmvcore::ResultsElement} -> \code{Action}
+}
+\section{Methods}{
+\subsection{Public methods}{
+\itemize{
+\item \href{#method-Action-new}{\code{Action$new()}}
+\item \href{#method-Action-perform}{\code{Action$perform()}}
+\item \href{#method-Action-isFilled}{\code{Action$isFilled()}}
+\item \href{#method-Action-asString}{\code{Action$asString()}}
+\item \href{#method-Action-.update}{\code{Action$.update()}}
+\item \href{#method-Action-asProtoBuf}{\code{Action$asProtoBuf()}}
+\item \href{#method-Action-clone}{\code{Action$clone()}}
+}
+}
+\if{html}{\out{
+<details><summary>Inherited methods</summary>
+<ul>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id=".createImages"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-.createImages'><code>jmvcore::ResultsElement$.createImages()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id=".has"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-.has'><code>jmvcore::ResultsElement$.has()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id=".render"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-.render'><code>jmvcore::ResultsElement$.render()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id=".setKey"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-.setKey'><code>jmvcore::ResultsElement$.setKey()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id=".setName"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-.setName'><code>jmvcore::ResultsElement$.setName()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id=".setParent"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-.setParent'><code>jmvcore::ResultsElement$.setParent()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="fromProtoBuf"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-fromProtoBuf'><code>jmvcore::ResultsElement$fromProtoBuf()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="get"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-get'><code>jmvcore::ResultsElement$get()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="getBoundVars"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-getBoundVars'><code>jmvcore::ResultsElement$getBoundVars()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="getRefs"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-getRefs'><code>jmvcore::ResultsElement$getRefs()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="isNotFilled"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-isNotFilled'><code>jmvcore::ResultsElement$isNotFilled()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="print"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-print'><code>jmvcore::ResultsElement$print()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="resetVisible"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-resetVisible'><code>jmvcore::ResultsElement$resetVisible()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="saveAs"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-saveAs'><code>jmvcore::ResultsElement$saveAs()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setError"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setError'><code>jmvcore::ResultsElement$setError()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setRefs"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setRefs'><code>jmvcore::ResultsElement$setRefs()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setState"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setState'><code>jmvcore::ResultsElement$setState()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setStatus"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setStatus'><code>jmvcore::ResultsElement$setStatus()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setTitle"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setTitle'><code>jmvcore::ResultsElement$setTitle()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setVisible"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setVisible'><code>jmvcore::ResultsElement$setVisible()</code></a></span></li>
+</ul>
+</details>
+}}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Action-new"></a>}}
+\if{latex}{\out{\hypertarget{method-Action-new}{}}}
+\subsection{Method \code{new()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Action$new(
+  options,
+  name = "",
+  title = "",
+  visible = TRUE,
+  clearWith = "*",
+  refs = character(),
+  operation
+)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Action-perform"></a>}}
+\if{latex}{\out{\hypertarget{method-Action-perform}{}}}
+\subsection{Method \code{perform()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Action$perform(options = NULL)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Action-isFilled"></a>}}
+\if{latex}{\out{\hypertarget{method-Action-isFilled}{}}}
+\subsection{Method \code{isFilled()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Action$isFilled()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Action-asString"></a>}}
+\if{latex}{\out{\hypertarget{method-Action-asString}{}}}
+\subsection{Method \code{asString()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Action$asString()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Action-.update"></a>}}
+\if{latex}{\out{\hypertarget{method-Action-.update}{}}}
+\subsection{Method \code{.update()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Action$.update()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Action-asProtoBuf"></a>}}
+\if{latex}{\out{\hypertarget{method-Action-asProtoBuf}{}}}
+\subsection{Method \code{asProtoBuf()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Action$asProtoBuf(incAsText = FALSE, status = NULL, includeState = TRUE)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Action-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-Action-clone}{}}}
+\subsection{Method \code{clone()}}{
+The objects of this class are cloneable with this method.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Action$clone(deep = FALSE)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{deep}}{Whether to make a deep clone.}
+}
+\if{html}{\out{</div>}}
+}
+}
+}
+\section{Methods}{
+\subsection{Public methods}{
+\itemize{
+\item \href{#method-Analysis-new}{\code{Analysis$new()}}
+\item \href{#method-Analysis-translate}{\code{Analysis$translate()}}
+\item \href{#method-Analysis-check}{\code{Analysis$check()}}
+\item \href{#method-Analysis-setStatus}{\code{Analysis$setStatus()}}
+\item \href{#method-Analysis-setError}{\code{Analysis$setError()}}
+\item \href{#method-Analysis-init}{\code{Analysis$init()}}
+\item \href{#method-Analysis-postInit}{\code{Analysis$postInit()}}
+\item \href{#method-Analysis-run}{\code{Analysis$run()}}
+\item \href{#method-Analysis-addAddon}{\code{Analysis$addAddon()}}
+\item \href{#method-Analysis-print}{\code{Analysis$print()}}
+\item \href{#method-Analysis-.save}{\code{Analysis$.save()}}
+\item \href{#method-Analysis-.load}{\code{Analysis$.load()}}
+\item \href{#method-Analysis-.createPlotObject}{\code{Analysis$.createPlotObject()}}
+\item \href{#method-Analysis-.render}{\code{Analysis$.render()}}
+\item \href{#method-Analysis-.createImages}{\code{Analysis$.createImages()}}
+\item \href{#method-Analysis-.createImage}{\code{Analysis$.createImage()}}
+\item \href{#method-Analysis-.setReadDatasetSource}{\code{Analysis$.setReadDatasetSource()}}
+\item \href{#method-Analysis-.setReadDatasetHeaderSource}{\code{Analysis$.setReadDatasetHeaderSource()}}
+\item \href{#method-Analysis-.setStatePathSource}{\code{Analysis$.setStatePathSource()}}
+\item \href{#method-Analysis-.setResourcesPathSource}{\code{Analysis$.setResourcesPathSource()}}
+\item \href{#method-Analysis-.setCheckpoint}{\code{Analysis$.setCheckpoint()}}
+\item \href{#method-Analysis-.setParent}{\code{Analysis$.setParent()}}
+\item \href{#method-Analysis-.savePart}{\code{Analysis$.savePart()}}
+\item \href{#method-Analysis-readDataset}{\code{Analysis$readDataset()}}
+\item \href{#method-Analysis-optionsChangedHandler}{\code{Analysis$optionsChangedHandler()}}
+\item \href{#method-Analysis-asProtoBuf}{\code{Analysis$asProtoBuf()}}
+\item \href{#method-Analysis-serialize}{\code{Analysis$serialize()}}
+\item \href{#method-Analysis-asSource}{\code{Analysis$asSource()}}
+\item \href{#method-Analysis-clone}{\code{Analysis$clone()}}
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Analysis-new"></a>}}
+\if{latex}{\out{\hypertarget{method-Analysis-new}{}}}
+\subsection{Method \code{new()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Analysis$new(
+  package,
+  name,
+  version,
+  options,
+  results,
+  pause = NULL,
+  data = NULL,
+  datasetId = "",
+  analysisId = "",
+  revision = 0,
+  completeWhenFilled = FALSE,
+  requiresMissings = FALSE,
+  weightsSupport = "auto",
+  ...
+)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Analysis-translate"></a>}}
+\if{latex}{\out{\hypertarget{method-Analysis-translate}{}}}
+\subsection{Method \code{translate()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Analysis$translate(text, n = 1)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Analysis-check"></a>}}
+\if{latex}{\out{\hypertarget{method-Analysis-check}{}}}
+\subsection{Method \code{check()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Analysis$check(checkValues = FALSE, checkVars = FALSE, checkData = FALSE)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Analysis-setStatus"></a>}}
+\if{latex}{\out{\hypertarget{method-Analysis-setStatus}{}}}
+\subsection{Method \code{setStatus()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Analysis$setStatus(status)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Analysis-setError"></a>}}
+\if{latex}{\out{\hypertarget{method-Analysis-setError}{}}}
+\subsection{Method \code{setError()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Analysis$setError(message, stacktrace = NULL)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Analysis-init"></a>}}
+\if{latex}{\out{\hypertarget{method-Analysis-init}{}}}
+\subsection{Method \code{init()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Analysis$init(noThrow = FALSE)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Analysis-postInit"></a>}}
+\if{latex}{\out{\hypertarget{method-Analysis-postInit}{}}}
+\subsection{Method \code{postInit()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Analysis$postInit(noThrow = FALSE)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Analysis-run"></a>}}
+\if{latex}{\out{\hypertarget{method-Analysis-run}{}}}
+\subsection{Method \code{run()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Analysis$run(noThrow = FALSE)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Analysis-addAddon"></a>}}
+\if{latex}{\out{\hypertarget{method-Analysis-addAddon}{}}}
+\subsection{Method \code{addAddon()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Analysis$addAddon(addon)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Analysis-print"></a>}}
+\if{latex}{\out{\hypertarget{method-Analysis-print}{}}}
+\subsection{Method \code{print()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Analysis$print()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Analysis-.save"></a>}}
+\if{latex}{\out{\hypertarget{method-Analysis-.save}{}}}
+\subsection{Method \code{.save()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Analysis$.save()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Analysis-.load"></a>}}
+\if{latex}{\out{\hypertarget{method-Analysis-.load}{}}}
+\subsection{Method \code{.load()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Analysis$.load(vChanges = character())}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Analysis-.createPlotObject"></a>}}
+\if{latex}{\out{\hypertarget{method-Analysis-.createPlotObject}{}}}
+\subsection{Method \code{.createPlotObject()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Analysis$.createPlotObject(funName, image, ...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Analysis-.render"></a>}}
+\if{latex}{\out{\hypertarget{method-Analysis-.render}{}}}
+\subsection{Method \code{.render()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Analysis$.render(funName, image, ...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Analysis-.createImages"></a>}}
+\if{latex}{\out{\hypertarget{method-Analysis-.createImages}{}}}
+\subsection{Method \code{.createImages()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Analysis$.createImages(noThrow = FALSE, ...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Analysis-.createImage"></a>}}
+\if{latex}{\out{\hypertarget{method-Analysis-.createImage}{}}}
+\subsection{Method \code{.createImage()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Analysis$.createImage(funName, image, ppi = 72, noThrow = FALSE, ...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Analysis-.setReadDatasetSource"></a>}}
+\if{latex}{\out{\hypertarget{method-Analysis-.setReadDatasetSource}{}}}
+\subsection{Method \code{.setReadDatasetSource()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Analysis$.setReadDatasetSource(read)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Analysis-.setReadDatasetHeaderSource"></a>}}
+\if{latex}{\out{\hypertarget{method-Analysis-.setReadDatasetHeaderSource}{}}}
+\subsection{Method \code{.setReadDatasetHeaderSource()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Analysis$.setReadDatasetHeaderSource(read)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Analysis-.setStatePathSource"></a>}}
+\if{latex}{\out{\hypertarget{method-Analysis-.setStatePathSource}{}}}
+\subsection{Method \code{.setStatePathSource()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Analysis$.setStatePathSource(statePath)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Analysis-.setResourcesPathSource"></a>}}
+\if{latex}{\out{\hypertarget{method-Analysis-.setResourcesPathSource}{}}}
+\subsection{Method \code{.setResourcesPathSource()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Analysis$.setResourcesPathSource(resourcesPathSource)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Analysis-.setCheckpoint"></a>}}
+\if{latex}{\out{\hypertarget{method-Analysis-.setCheckpoint}{}}}
+\subsection{Method \code{.setCheckpoint()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Analysis$.setCheckpoint(checkpoint)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Analysis-.setParent"></a>}}
+\if{latex}{\out{\hypertarget{method-Analysis-.setParent}{}}}
+\subsection{Method \code{.setParent()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Analysis$.setParent(parent)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Analysis-.savePart"></a>}}
+\if{latex}{\out{\hypertarget{method-Analysis-.savePart}{}}}
+\subsection{Method \code{.savePart()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Analysis$.savePart(path, part, ...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Analysis-readDataset"></a>}}
+\if{latex}{\out{\hypertarget{method-Analysis-readDataset}{}}}
+\subsection{Method \code{readDataset()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Analysis$readDataset(headerOnly = FALSE)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Analysis-optionsChangedHandler"></a>}}
+\if{latex}{\out{\hypertarget{method-Analysis-optionsChangedHandler}{}}}
+\subsection{Method \code{optionsChangedHandler()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Analysis$optionsChangedHandler(optionNames)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Analysis-asProtoBuf"></a>}}
+\if{latex}{\out{\hypertarget{method-Analysis-asProtoBuf}{}}}
+\subsection{Method \code{asProtoBuf()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Analysis$asProtoBuf(final = FALSE, includeState = TRUE)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Analysis-serialize"></a>}}
+\if{latex}{\out{\hypertarget{method-Analysis-serialize}{}}}
+\subsection{Method \code{serialize()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Analysis$serialize(
+  final = FALSE,
+  createErrorOnFailure = TRUE,
+  includeState = TRUE
+)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Analysis-asSource"></a>}}
+\if{latex}{\out{\hypertarget{method-Analysis-asSource}{}}}
+\subsection{Method \code{asSource()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Analysis$asSource()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Analysis-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-Analysis-clone}{}}}
+\subsection{Method \code{clone()}}{
+The objects of this class are cloneable with this method.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Analysis$clone(deep = FALSE)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{deep}}{Whether to make a deep clone.}
+}
+\if{html}{\out{</div>}}
+}
+}
+}
+\section{Super class}{
+\code{jmvcore::ResultsElement} -> \code{Array}
+}
+\section{Methods}{
+\subsection{Public methods}{
+\itemize{
+\item \href{#method-Array-new}{\code{Array$new()}}
+\item \href{#method-Array-get}{\code{Array$get()}}
+\item \href{#method-Array-addItem}{\code{Array$addItem()}}
+\item \href{#method-Array-setHeader}{\code{Array$setHeader()}}
+\item \href{#method-Array-isFilled}{\code{Array$isFilled()}}
+\item \href{#method-Array-getRefs}{\code{Array$getRefs()}}
+\item \href{#method-Array-.createImages}{\code{Array$.createImages()}}
+\item \href{#method-Array-.render}{\code{Array$.render()}}
+\item \href{#method-Array-.update}{\code{Array$.update()}}
+\item \href{#method-Array-.createItem}{\code{Array$.createItem()}}
+\item \href{#method-Array-clear}{\code{Array$clear()}}
+\item \href{#method-Array-asString}{\code{Array$asString()}}
+\item \href{#method-Array-.lookup}{\code{Array$.lookup()}}
+\item \href{#method-Array-fromProtoBuf}{\code{Array$fromProtoBuf()}}
+\item \href{#method-Array-asProtoBuf}{\code{Array$asProtoBuf()}}
+\item \href{#method-Array-.setParent}{\code{Array$.setParent()}}
+\item \href{#method-Array-clone}{\code{Array$clone()}}
+}
+}
+\if{html}{\out{
+<details><summary>Inherited methods</summary>
+<ul>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id=".has"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-.has'><code>jmvcore::ResultsElement$.has()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id=".setKey"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-.setKey'><code>jmvcore::ResultsElement$.setKey()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id=".setName"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-.setName'><code>jmvcore::ResultsElement$.setName()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="getBoundVars"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-getBoundVars'><code>jmvcore::ResultsElement$getBoundVars()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="isNotFilled"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-isNotFilled'><code>jmvcore::ResultsElement$isNotFilled()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="print"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-print'><code>jmvcore::ResultsElement$print()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="resetVisible"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-resetVisible'><code>jmvcore::ResultsElement$resetVisible()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="saveAs"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-saveAs'><code>jmvcore::ResultsElement$saveAs()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setError"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setError'><code>jmvcore::ResultsElement$setError()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setRefs"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setRefs'><code>jmvcore::ResultsElement$setRefs()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setState"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setState'><code>jmvcore::ResultsElement$setState()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setStatus"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setStatus'><code>jmvcore::ResultsElement$setStatus()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setTitle"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setTitle'><code>jmvcore::ResultsElement$setTitle()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setVisible"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setVisible'><code>jmvcore::ResultsElement$setVisible()</code></a></span></li>
+</ul>
+</details>
+}}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Array-new"></a>}}
+\if{latex}{\out{\hypertarget{method-Array-new}{}}}
+\subsection{Method \code{new()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Array$new(
+  options,
+  template,
+  name = NULL,
+  title = "no title",
+  visible = TRUE,
+  clearWith = NULL,
+  refs = character(),
+  items = 0,
+  layout = "none",
+  hideHeadingOnlyChild = FALSE,
+  ...
+)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Array-get"></a>}}
+\if{latex}{\out{\hypertarget{method-Array-get}{}}}
+\subsection{Method \code{get()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Array$get(key = NULL, name = NULL, index = NULL)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Array-addItem"></a>}}
+\if{latex}{\out{\hypertarget{method-Array-addItem}{}}}
+\subsection{Method \code{addItem()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Array$addItem(key)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Array-setHeader"></a>}}
+\if{latex}{\out{\hypertarget{method-Array-setHeader}{}}}
+\subsection{Method \code{setHeader()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Array$setHeader(header)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Array-isFilled"></a>}}
+\if{latex}{\out{\hypertarget{method-Array-isFilled}{}}}
+\subsection{Method \code{isFilled()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Array$isFilled()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Array-getRefs"></a>}}
+\if{latex}{\out{\hypertarget{method-Array-getRefs}{}}}
+\subsection{Method \code{getRefs()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Array$getRefs(recurse = FALSE)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Array-.createImages"></a>}}
+\if{latex}{\out{\hypertarget{method-Array-.createImages}{}}}
+\subsection{Method \code{.createImages()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Array$.createImages(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Array-.render"></a>}}
+\if{latex}{\out{\hypertarget{method-Array-.render}{}}}
+\subsection{Method \code{.render()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Array$.render(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Array-.update"></a>}}
+\if{latex}{\out{\hypertarget{method-Array-.update}{}}}
+\subsection{Method \code{.update()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Array$.update()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Array-.createItem"></a>}}
+\if{latex}{\out{\hypertarget{method-Array-.createItem}{}}}
+\subsection{Method \code{.createItem()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Array$.createItem(key, index)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Array-clear"></a>}}
+\if{latex}{\out{\hypertarget{method-Array-clear}{}}}
+\subsection{Method \code{clear()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Array$clear()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Array-asString"></a>}}
+\if{latex}{\out{\hypertarget{method-Array-asString}{}}}
+\subsection{Method \code{asString()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Array$asString()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Array-.lookup"></a>}}
+\if{latex}{\out{\hypertarget{method-Array-.lookup}{}}}
+\subsection{Method \code{.lookup()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Array$.lookup(path)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Array-fromProtoBuf"></a>}}
+\if{latex}{\out{\hypertarget{method-Array-fromProtoBuf}{}}}
+\subsection{Method \code{fromProtoBuf()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Array$fromProtoBuf(element, oChanges, vChanges)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Array-asProtoBuf"></a>}}
+\if{latex}{\out{\hypertarget{method-Array-asProtoBuf}{}}}
+\subsection{Method \code{asProtoBuf()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Array$asProtoBuf(incAsText = FALSE, status = NULL, includeState = TRUE)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Array-.setParent"></a>}}
+\if{latex}{\out{\hypertarget{method-Array-.setParent}{}}}
+\subsection{Method \code{.setParent()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Array$.setParent(parent)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Array-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-Array-clone}{}}}
+\subsection{Method \code{clone()}}{
+The objects of this class are cloneable with this method.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Array$clone(deep = FALSE)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{deep}}{Whether to make a deep clone.}
+}
+\if{html}{\out{</div>}}
+}
+}
+}
+\section{Methods}{
+\subsection{Public methods}{
+\itemize{
+\item \href{#method-Column-new}{\code{Column$new()}}
+\item \href{#method-Column-setTitle}{\code{Column$setTitle()}}
+\item \href{#method-Column-setSuperTitle}{\code{Column$setSuperTitle()}}
+\item \href{#method-Column-setVisible}{\code{Column$setVisible()}}
+\item \href{#method-Column-addCell}{\code{Column$addCell()}}
+\item \href{#method-Column-setCell}{\code{Column$setCell()}}
+\item \href{#method-Column-getCell}{\code{Column$getCell()}}
+\item \href{#method-Column-clear}{\code{Column$clear()}}
+\item \href{#method-Column-setSortKeys}{\code{Column$setSortKeys()}}
+\item \href{#method-Column-setRefs}{\code{Column$setRefs()}}
+\item \href{#method-Column-getRefs}{\code{Column$getRefs()}}
+\item \href{#method-Column-.measure}{\code{Column$.measure()}}
+\item \href{#method-Column-.titleForPrint}{\code{Column$.titleForPrint()}}
+\item \href{#method-Column-.cellForPrint}{\code{Column$.cellForPrint()}}
+\item \href{#method-Column-asProtoBuf}{\code{Column$asProtoBuf()}}
+\item \href{#method-Column-fromProtoBuf}{\code{Column$fromProtoBuf()}}
+\item \href{#method-Column-clone}{\code{Column$clone()}}
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Column-new"></a>}}
+\if{latex}{\out{\hypertarget{method-Column-new}{}}}
+\subsection{Method \code{new()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Column$new(
+  options,
+  name,
+  title,
+  superTitle,
+  visible,
+  content,
+  type,
+  format,
+  combineBelow,
+  sortable,
+  refs
+)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Column-setTitle"></a>}}
+\if{latex}{\out{\hypertarget{method-Column-setTitle}{}}}
+\subsection{Method \code{setTitle()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Column$setTitle(title)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Column-setSuperTitle"></a>}}
+\if{latex}{\out{\hypertarget{method-Column-setSuperTitle}{}}}
+\subsection{Method \code{setSuperTitle()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Column$setSuperTitle(title)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Column-setVisible"></a>}}
+\if{latex}{\out{\hypertarget{method-Column-setVisible}{}}}
+\subsection{Method \code{setVisible()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Column$setVisible(visible)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Column-addCell"></a>}}
+\if{latex}{\out{\hypertarget{method-Column-addCell}{}}}
+\subsection{Method \code{addCell()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Column$addCell(value, ...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Column-setCell"></a>}}
+\if{latex}{\out{\hypertarget{method-Column-setCell}{}}}
+\subsection{Method \code{setCell()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Column$setCell(row, value)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Column-getCell"></a>}}
+\if{latex}{\out{\hypertarget{method-Column-getCell}{}}}
+\subsection{Method \code{getCell()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Column$getCell(row)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Column-clear"></a>}}
+\if{latex}{\out{\hypertarget{method-Column-clear}{}}}
+\subsection{Method \code{clear()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Column$clear()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Column-setSortKeys"></a>}}
+\if{latex}{\out{\hypertarget{method-Column-setSortKeys}{}}}
+\subsection{Method \code{setSortKeys()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Column$setSortKeys(keys)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Column-setRefs"></a>}}
+\if{latex}{\out{\hypertarget{method-Column-setRefs}{}}}
+\subsection{Method \code{setRefs()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Column$setRefs(refs)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Column-getRefs"></a>}}
+\if{latex}{\out{\hypertarget{method-Column-getRefs}{}}}
+\subsection{Method \code{getRefs()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Column$getRefs()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Column-.measure"></a>}}
+\if{latex}{\out{\hypertarget{method-Column-.measure}{}}}
+\subsection{Method \code{.measure()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Column$.measure()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Column-.titleForPrint"></a>}}
+\if{latex}{\out{\hypertarget{method-Column-.titleForPrint}{}}}
+\subsection{Method \code{.titleForPrint()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Column$.titleForPrint(width = NULL)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Column-.cellForPrint"></a>}}
+\if{latex}{\out{\hypertarget{method-Column-.cellForPrint}{}}}
+\subsection{Method \code{.cellForPrint()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Column$.cellForPrint(i, measures = NULL, width = NA)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Column-asProtoBuf"></a>}}
+\if{latex}{\out{\hypertarget{method-Column-asProtoBuf}{}}}
+\subsection{Method \code{asProtoBuf()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Column$asProtoBuf()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Column-fromProtoBuf"></a>}}
+\if{latex}{\out{\hypertarget{method-Column-fromProtoBuf}{}}}
+\subsection{Method \code{fromProtoBuf()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Column$fromProtoBuf(columnPB)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Column-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-Column-clone}{}}}
+\subsection{Method \code{clone()}}{
+The objects of this class are cloneable with this method.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Column$clone(deep = FALSE)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{deep}}{Whether to make a deep clone.}
+}
+\if{html}{\out{</div>}}
+}
+}
+}
+\section{Super class}{
+\code{jmvcore::ResultsElement} -> \code{Group}
+}
+\section{Methods}{
+\subsection{Public methods}{
+\itemize{
+\item \href{#method-Group-new}{\code{Group$new()}}
+\item \href{#method-Group-get}{\code{Group$get()}}
+\item \href{#method-Group-clear}{\code{Group$clear()}}
+\item \href{#method-Group-.render}{\code{Group$.render()}}
+\item \href{#method-Group-.createImages}{\code{Group$.createImages()}}
+\item \href{#method-Group-add}{\code{Group$add()}}
+\item \href{#method-Group-insert}{\code{Group$insert()}}
+\item \href{#method-Group-remove}{\code{Group$remove()}}
+\item \href{#method-Group-isFilled}{\code{Group$isFilled()}}
+\item \href{#method-Group-getRefs}{\code{Group$getRefs()}}
+\item \href{#method-Group-.update}{\code{Group$.update()}}
+\item \href{#method-Group-.lookup}{\code{Group$.lookup()}}
+\item \href{#method-Group-.setKey}{\code{Group$.setKey()}}
+\item \href{#method-Group-asString}{\code{Group$asString()}}
+\item \href{#method-Group-fromProtoBuf}{\code{Group$fromProtoBuf()}}
+\item \href{#method-Group-asProtoBuf}{\code{Group$asProtoBuf()}}
+\item \href{#method-Group-.setParent}{\code{Group$.setParent()}}
+\item \href{#method-Group-clone}{\code{Group$clone()}}
+}
+}
+\if{html}{\out{
+<details><summary>Inherited methods</summary>
+<ul>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id=".has"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-.has'><code>jmvcore::ResultsElement$.has()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id=".setName"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-.setName'><code>jmvcore::ResultsElement$.setName()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="getBoundVars"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-getBoundVars'><code>jmvcore::ResultsElement$getBoundVars()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="isNotFilled"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-isNotFilled'><code>jmvcore::ResultsElement$isNotFilled()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="print"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-print'><code>jmvcore::ResultsElement$print()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="resetVisible"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-resetVisible'><code>jmvcore::ResultsElement$resetVisible()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="saveAs"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-saveAs'><code>jmvcore::ResultsElement$saveAs()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setError"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setError'><code>jmvcore::ResultsElement$setError()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setRefs"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setRefs'><code>jmvcore::ResultsElement$setRefs()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setState"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setState'><code>jmvcore::ResultsElement$setState()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setStatus"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setStatus'><code>jmvcore::ResultsElement$setStatus()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setTitle"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setTitle'><code>jmvcore::ResultsElement$setTitle()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setVisible"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setVisible'><code>jmvcore::ResultsElement$setVisible()</code></a></span></li>
+</ul>
+</details>
+}}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Group-new"></a>}}
+\if{latex}{\out{\hypertarget{method-Group-new}{}}}
+\subsection{Method \code{new()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Group$new(
+  options,
+  name = NULL,
+  title = "no title",
+  visible = TRUE,
+  clearWith = NULL,
+  refs = character()
+)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Group-get"></a>}}
+\if{latex}{\out{\hypertarget{method-Group-get}{}}}
+\subsection{Method \code{get()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Group$get(name)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Group-clear"></a>}}
+\if{latex}{\out{\hypertarget{method-Group-clear}{}}}
+\subsection{Method \code{clear()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Group$clear()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Group-.render"></a>}}
+\if{latex}{\out{\hypertarget{method-Group-.render}{}}}
+\subsection{Method \code{.render()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Group$.render(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Group-.createImages"></a>}}
+\if{latex}{\out{\hypertarget{method-Group-.createImages}{}}}
+\subsection{Method \code{.createImages()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Group$.createImages(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Group-add"></a>}}
+\if{latex}{\out{\hypertarget{method-Group-add}{}}}
+\subsection{Method \code{add()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Group$add(item)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Group-insert"></a>}}
+\if{latex}{\out{\hypertarget{method-Group-insert}{}}}
+\subsection{Method \code{insert()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Group$insert(index, item)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Group-remove"></a>}}
+\if{latex}{\out{\hypertarget{method-Group-remove}{}}}
+\subsection{Method \code{remove()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Group$remove(name)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Group-isFilled"></a>}}
+\if{latex}{\out{\hypertarget{method-Group-isFilled}{}}}
+\subsection{Method \code{isFilled()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Group$isFilled()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Group-getRefs"></a>}}
+\if{latex}{\out{\hypertarget{method-Group-getRefs}{}}}
+\subsection{Method \code{getRefs()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Group$getRefs(recurse = FALSE)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Group-.update"></a>}}
+\if{latex}{\out{\hypertarget{method-Group-.update}{}}}
+\subsection{Method \code{.update()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Group$.update()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Group-.lookup"></a>}}
+\if{latex}{\out{\hypertarget{method-Group-.lookup}{}}}
+\subsection{Method \code{.lookup()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Group$.lookup(path)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Group-.setKey"></a>}}
+\if{latex}{\out{\hypertarget{method-Group-.setKey}{}}}
+\subsection{Method \code{.setKey()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Group$.setKey(key, index)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Group-asString"></a>}}
+\if{latex}{\out{\hypertarget{method-Group-asString}{}}}
+\subsection{Method \code{asString()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Group$asString()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Group-fromProtoBuf"></a>}}
+\if{latex}{\out{\hypertarget{method-Group-fromProtoBuf}{}}}
+\subsection{Method \code{fromProtoBuf()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Group$fromProtoBuf(pb, oChanges, vChanges)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Group-asProtoBuf"></a>}}
+\if{latex}{\out{\hypertarget{method-Group-asProtoBuf}{}}}
+\subsection{Method \code{asProtoBuf()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Group$asProtoBuf(
+  incAsText = FALSE,
+  status = NULL,
+  prepend = NULL,
+  append = NULL,
+  includeState = TRUE
+)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Group-.setParent"></a>}}
+\if{latex}{\out{\hypertarget{method-Group-.setParent}{}}}
+\subsection{Method \code{.setParent()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Group$.setParent(parent)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Group-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-Group-clone}{}}}
+\subsection{Method \code{clone()}}{
+The objects of this class are cloneable with this method.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Group$clone(deep = FALSE)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{deep}}{Whether to make a deep clone.}
+}
+\if{html}{\out{</div>}}
+}
+}
+}
+\section{Super class}{
+\code{jmvcore::ResultsElement} -> \code{Html}
+}
+\section{Methods}{
+\subsection{Public methods}{
+\itemize{
+\item \href{#method-Html-new}{\code{Html$new()}}
+\item \href{#method-Html-setContent}{\code{Html$setContent()}}
+\item \href{#method-Html-isFilled}{\code{Html$isFilled()}}
+\item \href{#method-Html-asString}{\code{Html$asString()}}
+\item \href{#method-Html-fromProtoBuf}{\code{Html$fromProtoBuf()}}
+\item \href{#method-Html-asProtoBuf}{\code{Html$asProtoBuf()}}
+\item \href{#method-Html-clone}{\code{Html$clone()}}
+}
+}
+\if{html}{\out{
+<details><summary>Inherited methods</summary>
+<ul>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id=".createImages"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-.createImages'><code>jmvcore::ResultsElement$.createImages()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id=".has"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-.has'><code>jmvcore::ResultsElement$.has()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id=".render"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-.render'><code>jmvcore::ResultsElement$.render()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id=".setKey"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-.setKey'><code>jmvcore::ResultsElement$.setKey()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id=".setName"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-.setName'><code>jmvcore::ResultsElement$.setName()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id=".setParent"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-.setParent'><code>jmvcore::ResultsElement$.setParent()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id=".update"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-.update'><code>jmvcore::ResultsElement$.update()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="get"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-get'><code>jmvcore::ResultsElement$get()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="getBoundVars"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-getBoundVars'><code>jmvcore::ResultsElement$getBoundVars()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="getRefs"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-getRefs'><code>jmvcore::ResultsElement$getRefs()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="isNotFilled"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-isNotFilled'><code>jmvcore::ResultsElement$isNotFilled()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="print"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-print'><code>jmvcore::ResultsElement$print()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="resetVisible"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-resetVisible'><code>jmvcore::ResultsElement$resetVisible()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="saveAs"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-saveAs'><code>jmvcore::ResultsElement$saveAs()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setError"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setError'><code>jmvcore::ResultsElement$setError()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setRefs"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setRefs'><code>jmvcore::ResultsElement$setRefs()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setState"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setState'><code>jmvcore::ResultsElement$setState()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setStatus"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setStatus'><code>jmvcore::ResultsElement$setStatus()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setTitle"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setTitle'><code>jmvcore::ResultsElement$setTitle()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setVisible"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setVisible'><code>jmvcore::ResultsElement$setVisible()</code></a></span></li>
+</ul>
+</details>
+}}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Html-new"></a>}}
+\if{latex}{\out{\hypertarget{method-Html-new}{}}}
+\subsection{Method \code{new()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Html$new(
+  options,
+  name = "",
+  title = "",
+  visible = TRUE,
+  clearWith = "*",
+  refs = character(),
+  content = ""
+)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Html-setContent"></a>}}
+\if{latex}{\out{\hypertarget{method-Html-setContent}{}}}
+\subsection{Method \code{setContent()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Html$setContent(value)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Html-isFilled"></a>}}
+\if{latex}{\out{\hypertarget{method-Html-isFilled}{}}}
+\subsection{Method \code{isFilled()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Html$isFilled()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Html-asString"></a>}}
+\if{latex}{\out{\hypertarget{method-Html-asString}{}}}
+\subsection{Method \code{asString()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Html$asString()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Html-fromProtoBuf"></a>}}
+\if{latex}{\out{\hypertarget{method-Html-fromProtoBuf}{}}}
+\subsection{Method \code{fromProtoBuf()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Html$fromProtoBuf(element, oChanges, vChanges)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Html-asProtoBuf"></a>}}
+\if{latex}{\out{\hypertarget{method-Html-asProtoBuf}{}}}
+\subsection{Method \code{asProtoBuf()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Html$asProtoBuf(incAsText = FALSE, status = NULL, includeState = TRUE)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Html-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-Html-clone}{}}}
+\subsection{Method \code{clone()}}{
+The objects of this class are cloneable with this method.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Html$clone(deep = FALSE)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{deep}}{Whether to make a deep clone.}
+}
+\if{html}{\out{</div>}}
+}
+}
+}
+\section{Super class}{
+\code{jmvcore::ResultsElement} -> \code{Image}
+}
+\section{Methods}{
+\subsection{Public methods}{
+\itemize{
+\item \href{#method-Image-new}{\code{Image$new()}}
+\item \href{#method-Image-setSize}{\code{Image$setSize()}}
+\item \href{#method-Image-isFilled}{\code{Image$isFilled()}}
+\item \href{#method-Image-print}{\code{Image$print()}}
+\item \href{#method-Image-saveAs}{\code{Image$saveAs()}}
+\item \href{#method-Image-.render}{\code{Image$.render()}}
+\item \href{#method-Image-.createImages}{\code{Image$.createImages()}}
+\item \href{#method-Image-.setPath}{\code{Image$.setPath()}}
+\item \href{#method-Image-asString}{\code{Image$asString()}}
+\item \href{#method-Image-asProtoBuf}{\code{Image$asProtoBuf()}}
+\item \href{#method-Image-fromProtoBuf}{\code{Image$fromProtoBuf()}}
+\item \href{#method-Image-.setPlot}{\code{Image$.setPlot()}}
+\item \href{#method-Image-clone}{\code{Image$clone()}}
+}
+}
+\if{html}{\out{
+<details><summary>Inherited methods</summary>
+<ul>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id=".has"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-.has'><code>jmvcore::ResultsElement$.has()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id=".setKey"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-.setKey'><code>jmvcore::ResultsElement$.setKey()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id=".setName"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-.setName'><code>jmvcore::ResultsElement$.setName()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id=".setParent"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-.setParent'><code>jmvcore::ResultsElement$.setParent()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id=".update"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-.update'><code>jmvcore::ResultsElement$.update()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="get"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-get'><code>jmvcore::ResultsElement$get()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="getBoundVars"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-getBoundVars'><code>jmvcore::ResultsElement$getBoundVars()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="getRefs"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-getRefs'><code>jmvcore::ResultsElement$getRefs()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="isNotFilled"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-isNotFilled'><code>jmvcore::ResultsElement$isNotFilled()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="resetVisible"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-resetVisible'><code>jmvcore::ResultsElement$resetVisible()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setError"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setError'><code>jmvcore::ResultsElement$setError()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setRefs"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setRefs'><code>jmvcore::ResultsElement$setRefs()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setState"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setState'><code>jmvcore::ResultsElement$setState()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setStatus"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setStatus'><code>jmvcore::ResultsElement$setStatus()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setTitle"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setTitle'><code>jmvcore::ResultsElement$setTitle()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setVisible"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setVisible'><code>jmvcore::ResultsElement$setVisible()</code></a></span></li>
+</ul>
+</details>
+}}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Image-new"></a>}}
+\if{latex}{\out{\hypertarget{method-Image-new}{}}}
+\subsection{Method \code{new()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Image$new(
+  options,
+  width = 400,
+  height = 300,
+  renderFun = NULL,
+  renderInitFun = NULL,
+  requiresData = FALSE,
+  name = NULL,
+  title = "",
+  visible = TRUE,
+  clearWith = "*",
+  refs = character()
+)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Image-setSize"></a>}}
+\if{latex}{\out{\hypertarget{method-Image-setSize}{}}}
+\subsection{Method \code{setSize()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Image$setSize(width, height)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Image-isFilled"></a>}}
+\if{latex}{\out{\hypertarget{method-Image-isFilled}{}}}
+\subsection{Method \code{isFilled()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Image$isFilled()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Image-print"></a>}}
+\if{latex}{\out{\hypertarget{method-Image-print}{}}}
+\subsection{Method \code{print()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Image$print()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Image-saveAs"></a>}}
+\if{latex}{\out{\hypertarget{method-Image-saveAs}{}}}
+\subsection{Method \code{saveAs()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Image$saveAs(path, ...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Image-.render"></a>}}
+\if{latex}{\out{\hypertarget{method-Image-.render}{}}}
+\subsection{Method \code{.render()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Image$.render(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Image-.createImages"></a>}}
+\if{latex}{\out{\hypertarget{method-Image-.createImages}{}}}
+\subsection{Method \code{.createImages()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Image$.createImages(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Image-.setPath"></a>}}
+\if{latex}{\out{\hypertarget{method-Image-.setPath}{}}}
+\subsection{Method \code{.setPath()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Image$.setPath(path)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Image-asString"></a>}}
+\if{latex}{\out{\hypertarget{method-Image-asString}{}}}
+\subsection{Method \code{asString()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Image$asString()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Image-asProtoBuf"></a>}}
+\if{latex}{\out{\hypertarget{method-Image-asProtoBuf}{}}}
+\subsection{Method \code{asProtoBuf()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Image$asProtoBuf(incAsText = FALSE, status = NULL, includeState = TRUE)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Image-fromProtoBuf"></a>}}
+\if{latex}{\out{\hypertarget{method-Image-fromProtoBuf}{}}}
+\subsection{Method \code{fromProtoBuf()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Image$fromProtoBuf(element, oChanges, vChanges)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Image-.setPlot"></a>}}
+\if{latex}{\out{\hypertarget{method-Image-.setPlot}{}}}
+\subsection{Method \code{.setPlot()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Image$.setPlot(plot)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Image-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-Image-clone}{}}}
+\subsection{Method \code{clone()}}{
+The objects of this class are cloneable with this method.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Image$clone(deep = FALSE)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{deep}}{Whether to make a deep clone.}
+}
+\if{html}{\out{</div>}}
+}
+}
+}
+\section{Super class}{
+\code{jmvcore::ResultsElement} -> \code{Notice}
+}
+\section{Methods}{
+\subsection{Public methods}{
+\itemize{
+\item \href{#method-Notice-new}{\code{Notice$new()}}
+\item \href{#method-Notice-setContent}{\code{Notice$setContent()}}
+\item \href{#method-Notice-set}{\code{Notice$set()}}
+\item \href{#method-Notice-isFilled}{\code{Notice$isFilled()}}
+\item \href{#method-Notice-asString}{\code{Notice$asString()}}
+\item \href{#method-Notice-asProtoBuf}{\code{Notice$asProtoBuf()}}
+\item \href{#method-Notice-clone}{\code{Notice$clone()}}
+}
+}
+\if{html}{\out{
+<details><summary>Inherited methods</summary>
+<ul>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id=".createImages"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-.createImages'><code>jmvcore::ResultsElement$.createImages()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id=".has"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-.has'><code>jmvcore::ResultsElement$.has()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id=".render"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-.render'><code>jmvcore::ResultsElement$.render()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id=".setKey"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-.setKey'><code>jmvcore::ResultsElement$.setKey()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id=".setName"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-.setName'><code>jmvcore::ResultsElement$.setName()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id=".setParent"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-.setParent'><code>jmvcore::ResultsElement$.setParent()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id=".update"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-.update'><code>jmvcore::ResultsElement$.update()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="fromProtoBuf"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-fromProtoBuf'><code>jmvcore::ResultsElement$fromProtoBuf()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="get"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-get'><code>jmvcore::ResultsElement$get()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="getBoundVars"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-getBoundVars'><code>jmvcore::ResultsElement$getBoundVars()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="getRefs"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-getRefs'><code>jmvcore::ResultsElement$getRefs()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="isNotFilled"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-isNotFilled'><code>jmvcore::ResultsElement$isNotFilled()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="print"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-print'><code>jmvcore::ResultsElement$print()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="resetVisible"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-resetVisible'><code>jmvcore::ResultsElement$resetVisible()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="saveAs"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-saveAs'><code>jmvcore::ResultsElement$saveAs()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setError"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setError'><code>jmvcore::ResultsElement$setError()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setRefs"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setRefs'><code>jmvcore::ResultsElement$setRefs()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setState"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setState'><code>jmvcore::ResultsElement$setState()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setStatus"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setStatus'><code>jmvcore::ResultsElement$setStatus()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setTitle"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setTitle'><code>jmvcore::ResultsElement$setTitle()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setVisible"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setVisible'><code>jmvcore::ResultsElement$setVisible()</code></a></span></li>
+</ul>
+</details>
+}}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Notice-new"></a>}}
+\if{latex}{\out{\hypertarget{method-Notice-new}{}}}
+\subsection{Method \code{new()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Notice$new(
+  options,
+  name = "",
+  title = "",
+  visible = TRUE,
+  clearWith = "*",
+  refs = character(),
+  type = NoticeType$ERROR,
+  content = ""
+)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Notice-setContent"></a>}}
+\if{latex}{\out{\hypertarget{method-Notice-setContent}{}}}
+\subsection{Method \code{setContent()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Notice$setContent(content)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Notice-set"></a>}}
+\if{latex}{\out{\hypertarget{method-Notice-set}{}}}
+\subsection{Method \code{set()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Notice$set(type, content)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Notice-isFilled"></a>}}
+\if{latex}{\out{\hypertarget{method-Notice-isFilled}{}}}
+\subsection{Method \code{isFilled()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Notice$isFilled()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Notice-asString"></a>}}
+\if{latex}{\out{\hypertarget{method-Notice-asString}{}}}
+\subsection{Method \code{asString()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Notice$asString()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Notice-asProtoBuf"></a>}}
+\if{latex}{\out{\hypertarget{method-Notice-asProtoBuf}{}}}
+\subsection{Method \code{asProtoBuf()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Notice$asProtoBuf(incAsText = FALSE, status = NULL, includeState = TRUE)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Notice-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-Notice-clone}{}}}
+\subsection{Method \code{clone()}}{
+The objects of this class are cloneable with this method.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Notice$clone(deep = FALSE)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{deep}}{Whether to make a deep clone.}
+}
+\if{html}{\out{</div>}}
+}
+}
+}
+\section{Super class}{
+\code{jmvcore::ResultsElement} -> \code{Output}
+}
+\section{Methods}{
+\subsection{Public methods}{
+\itemize{
+\item \href{#method-Output-new}{\code{Output$new()}}
+\item \href{#method-Output-set}{\code{Output$set()}}
+\item \href{#method-Output-setValues}{\code{Output$setValues()}}
+\item \href{#method-Output-setDescription}{\code{Output$setDescription()}}
+\item \href{#method-Output-setTitle}{\code{Output$setTitle()}}
+\item \href{#method-Output-setRowNums}{\code{Output$setRowNums()}}
+\item \href{#method-Output-isFilled}{\code{Output$isFilled()}}
+\item \href{#method-Output-isNotFilled}{\code{Output$isNotFilled()}}
+\item \href{#method-Output-asString}{\code{Output$asString()}}
+\item \href{#method-Output-fromProtoBuf}{\code{Output$fromProtoBuf()}}
+\item \href{#method-Output-asProtoBuf}{\code{Output$asProtoBuf()}}
+\item \href{#method-Output-clone}{\code{Output$clone()}}
+}
+}
+\if{html}{\out{
+<details><summary>Inherited methods</summary>
+<ul>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id=".createImages"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-.createImages'><code>jmvcore::ResultsElement$.createImages()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id=".has"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-.has'><code>jmvcore::ResultsElement$.has()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id=".render"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-.render'><code>jmvcore::ResultsElement$.render()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id=".setKey"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-.setKey'><code>jmvcore::ResultsElement$.setKey()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id=".setName"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-.setName'><code>jmvcore::ResultsElement$.setName()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id=".setParent"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-.setParent'><code>jmvcore::ResultsElement$.setParent()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id=".update"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-.update'><code>jmvcore::ResultsElement$.update()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="get"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-get'><code>jmvcore::ResultsElement$get()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="getBoundVars"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-getBoundVars'><code>jmvcore::ResultsElement$getBoundVars()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="getRefs"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-getRefs'><code>jmvcore::ResultsElement$getRefs()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="print"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-print'><code>jmvcore::ResultsElement$print()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="resetVisible"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-resetVisible'><code>jmvcore::ResultsElement$resetVisible()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="saveAs"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-saveAs'><code>jmvcore::ResultsElement$saveAs()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setError"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setError'><code>jmvcore::ResultsElement$setError()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setRefs"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setRefs'><code>jmvcore::ResultsElement$setRefs()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setState"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setState'><code>jmvcore::ResultsElement$setState()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setStatus"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setStatus'><code>jmvcore::ResultsElement$setStatus()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setVisible"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setVisible'><code>jmvcore::ResultsElement$setVisible()</code></a></span></li>
+</ul>
+</details>
+}}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Output-new"></a>}}
+\if{latex}{\out{\hypertarget{method-Output-new}{}}}
+\subsection{Method \code{new()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Output$new(
+  options,
+  name = "",
+  title = "",
+  clearWith = "*",
+  refs = character(),
+  varTitle = "Output",
+  varDescription = "",
+  measureType = "continuous",
+  items = "1",
+  initInRun = FALSE
+)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Output-set"></a>}}
+\if{latex}{\out{\hypertarget{method-Output-set}{}}}
+\subsection{Method \code{set()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Output$set(keys, titles, descriptions, measureTypes)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Output-setValues"></a>}}
+\if{latex}{\out{\hypertarget{method-Output-setValues}{}}}
+\subsection{Method \code{setValues()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Output$setValues(values, key, index)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Output-setDescription"></a>}}
+\if{latex}{\out{\hypertarget{method-Output-setDescription}{}}}
+\subsection{Method \code{setDescription()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Output$setDescription(description, key, index)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Output-setTitle"></a>}}
+\if{latex}{\out{\hypertarget{method-Output-setTitle}{}}}
+\subsection{Method \code{setTitle()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Output$setTitle(title, key, index)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Output-setRowNums"></a>}}
+\if{latex}{\out{\hypertarget{method-Output-setRowNums}{}}}
+\subsection{Method \code{setRowNums()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Output$setRowNums(rowNums)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Output-isFilled"></a>}}
+\if{latex}{\out{\hypertarget{method-Output-isFilled}{}}}
+\subsection{Method \code{isFilled()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Output$isFilled(key)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Output-isNotFilled"></a>}}
+\if{latex}{\out{\hypertarget{method-Output-isNotFilled}{}}}
+\subsection{Method \code{isNotFilled()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Output$isNotFilled(key)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Output-asString"></a>}}
+\if{latex}{\out{\hypertarget{method-Output-asString}{}}}
+\subsection{Method \code{asString()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Output$asString()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Output-fromProtoBuf"></a>}}
+\if{latex}{\out{\hypertarget{method-Output-fromProtoBuf}{}}}
+\subsection{Method \code{fromProtoBuf()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Output$fromProtoBuf(element, oChanges, vChanges)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Output-asProtoBuf"></a>}}
+\if{latex}{\out{\hypertarget{method-Output-asProtoBuf}{}}}
+\subsection{Method \code{asProtoBuf()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Output$asProtoBuf(incAsText = FALSE, status = NULL, includeState = TRUE)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Output-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-Output-clone}{}}}
+\subsection{Method \code{clone()}}{
+The objects of this class are cloneable with this method.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Output$clone(deep = FALSE)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{deep}}{Whether to make a deep clone.}
+}
+\if{html}{\out{</div>}}
+}
+}
+}
+\section{Super class}{
+\code{jmvcore::ResultsElement} -> \code{Preformatted}
+}
+\section{Methods}{
+\subsection{Public methods}{
+\itemize{
+\item \href{#method-Preformatted-new}{\code{Preformatted$new()}}
+\item \href{#method-Preformatted-setContent}{\code{Preformatted$setContent()}}
+\item \href{#method-Preformatted-isFilled}{\code{Preformatted$isFilled()}}
+\item \href{#method-Preformatted-asString}{\code{Preformatted$asString()}}
+\item \href{#method-Preformatted-fromProtoBuf}{\code{Preformatted$fromProtoBuf()}}
+\item \href{#method-Preformatted-asProtoBuf}{\code{Preformatted$asProtoBuf()}}
+\item \href{#method-Preformatted-clone}{\code{Preformatted$clone()}}
+}
+}
+\if{html}{\out{
+<details><summary>Inherited methods</summary>
+<ul>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id=".createImages"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-.createImages'><code>jmvcore::ResultsElement$.createImages()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id=".has"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-.has'><code>jmvcore::ResultsElement$.has()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id=".render"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-.render'><code>jmvcore::ResultsElement$.render()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id=".setKey"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-.setKey'><code>jmvcore::ResultsElement$.setKey()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id=".setName"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-.setName'><code>jmvcore::ResultsElement$.setName()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id=".setParent"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-.setParent'><code>jmvcore::ResultsElement$.setParent()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id=".update"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-.update'><code>jmvcore::ResultsElement$.update()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="get"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-get'><code>jmvcore::ResultsElement$get()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="getBoundVars"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-getBoundVars'><code>jmvcore::ResultsElement$getBoundVars()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="getRefs"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-getRefs'><code>jmvcore::ResultsElement$getRefs()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="isNotFilled"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-isNotFilled'><code>jmvcore::ResultsElement$isNotFilled()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="print"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-print'><code>jmvcore::ResultsElement$print()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="resetVisible"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-resetVisible'><code>jmvcore::ResultsElement$resetVisible()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="saveAs"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-saveAs'><code>jmvcore::ResultsElement$saveAs()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setError"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setError'><code>jmvcore::ResultsElement$setError()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setRefs"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setRefs'><code>jmvcore::ResultsElement$setRefs()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setState"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setState'><code>jmvcore::ResultsElement$setState()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setStatus"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setStatus'><code>jmvcore::ResultsElement$setStatus()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setTitle"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setTitle'><code>jmvcore::ResultsElement$setTitle()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setVisible"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setVisible'><code>jmvcore::ResultsElement$setVisible()</code></a></span></li>
+</ul>
+</details>
+}}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Preformatted-new"></a>}}
+\if{latex}{\out{\hypertarget{method-Preformatted-new}{}}}
+\subsection{Method \code{new()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Preformatted$new(
+  options,
+  name = "",
+  title = "",
+  visible = TRUE,
+  clearWith = "*",
+  refs = character()
+)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Preformatted-setContent"></a>}}
+\if{latex}{\out{\hypertarget{method-Preformatted-setContent}{}}}
+\subsection{Method \code{setContent()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Preformatted$setContent(value)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Preformatted-isFilled"></a>}}
+\if{latex}{\out{\hypertarget{method-Preformatted-isFilled}{}}}
+\subsection{Method \code{isFilled()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Preformatted$isFilled()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Preformatted-asString"></a>}}
+\if{latex}{\out{\hypertarget{method-Preformatted-asString}{}}}
+\subsection{Method \code{asString()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Preformatted$asString()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Preformatted-fromProtoBuf"></a>}}
+\if{latex}{\out{\hypertarget{method-Preformatted-fromProtoBuf}{}}}
+\subsection{Method \code{fromProtoBuf()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Preformatted$fromProtoBuf(element, oChanges, vChanges)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Preformatted-asProtoBuf"></a>}}
+\if{latex}{\out{\hypertarget{method-Preformatted-asProtoBuf}{}}}
+\subsection{Method \code{asProtoBuf()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Preformatted$asProtoBuf(incAsText = FALSE, status = NULL, includeState = TRUE)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Preformatted-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-Preformatted-clone}{}}}
+\subsection{Method \code{clone()}}{
+The objects of this class are cloneable with this method.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Preformatted$clone(deep = FALSE)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{deep}}{Whether to make a deep clone.}
+}
+\if{html}{\out{</div>}}
+}
+}
+}
+\section{Super class}{
+\code{jmvcore::ResultsElement} -> \code{State}
+}
+\section{Methods}{
+\subsection{Public methods}{
+\itemize{
+\item \href{#method-State-new}{\code{State$new()}}
+\item \href{#method-State-clone}{\code{State$clone()}}
+}
+}
+\if{html}{\out{
+<details><summary>Inherited methods</summary>
+<ul>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id=".createImages"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-.createImages'><code>jmvcore::ResultsElement$.createImages()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id=".has"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-.has'><code>jmvcore::ResultsElement$.has()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id=".render"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-.render'><code>jmvcore::ResultsElement$.render()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id=".setKey"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-.setKey'><code>jmvcore::ResultsElement$.setKey()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id=".setName"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-.setName'><code>jmvcore::ResultsElement$.setName()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id=".setParent"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-.setParent'><code>jmvcore::ResultsElement$.setParent()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id=".update"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-.update'><code>jmvcore::ResultsElement$.update()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="asProtoBuf"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-asProtoBuf'><code>jmvcore::ResultsElement$asProtoBuf()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="asString"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-asString'><code>jmvcore::ResultsElement$asString()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="fromProtoBuf"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-fromProtoBuf'><code>jmvcore::ResultsElement$fromProtoBuf()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="get"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-get'><code>jmvcore::ResultsElement$get()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="getBoundVars"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-getBoundVars'><code>jmvcore::ResultsElement$getBoundVars()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="getRefs"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-getRefs'><code>jmvcore::ResultsElement$getRefs()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="isFilled"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-isFilled'><code>jmvcore::ResultsElement$isFilled()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="isNotFilled"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-isNotFilled'><code>jmvcore::ResultsElement$isNotFilled()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="print"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-print'><code>jmvcore::ResultsElement$print()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="resetVisible"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-resetVisible'><code>jmvcore::ResultsElement$resetVisible()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="saveAs"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-saveAs'><code>jmvcore::ResultsElement$saveAs()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setError"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setError'><code>jmvcore::ResultsElement$setError()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setRefs"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setRefs'><code>jmvcore::ResultsElement$setRefs()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setState"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setState'><code>jmvcore::ResultsElement$setState()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setStatus"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setStatus'><code>jmvcore::ResultsElement$setStatus()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setTitle"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setTitle'><code>jmvcore::ResultsElement$setTitle()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setVisible"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setVisible'><code>jmvcore::ResultsElement$setVisible()</code></a></span></li>
+</ul>
+</details>
+}}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-State-new"></a>}}
+\if{latex}{\out{\hypertarget{method-State-new}{}}}
+\subsection{Method \code{new()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{State$new(options, name, title, visible, clearWith)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-State-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-State-clone}{}}}
+\subsection{Method \code{clone()}}{
+The objects of this class are cloneable with this method.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{State$clone(deep = FALSE)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{deep}}{Whether to make a deep clone.}
+}
+\if{html}{\out{</div>}}
+}
+}
+}
+\section{Super class}{
+\code{jmvcore::ResultsElement} -> \code{Table}
+}
+\section{Methods}{
+\subsection{Public methods}{
+\itemize{
+\item \href{#method-Table-new}{\code{Table$new()}}
+\item \href{#method-Table-isFilled}{\code{Table$isFilled()}}
+\item \href{#method-Table-getRefs}{\code{Table$getRefs()}}
+\item \href{#method-Table-.update}{\code{Table$.update()}}
+\item \href{#method-Table-deleteRows}{\code{Table$deleteRows()}}
+\item \href{#method-Table-addColumn}{\code{Table$addColumn()}}
+\item \href{#method-Table-addRow}{\code{Table$addRow()}}
+\item \href{#method-Table-addFormat}{\code{Table$addFormat()}}
+\item \href{#method-Table-setRow}{\code{Table$setRow()}}
+\item \href{#method-Table-getColumn}{\code{Table$getColumn()}}
+\item \href{#method-Table-setCell}{\code{Table$setCell()}}
+\item \href{#method-Table-getCell}{\code{Table$getCell()}}
+\item \href{#method-Table-getRows}{\code{Table$getRows()}}
+\item \href{#method-Table-getRow}{\code{Table$getRow()}}
+\item \href{#method-Table-addFootnote}{\code{Table$addFootnote()}}
+\item \href{#method-Table-addSymbol}{\code{Table$addSymbol()}}
+\item \href{#method-Table-setNote}{\code{Table$setNote()}}
+\item \href{#method-Table-setSortKeys}{\code{Table$setSortKeys()}}
+\item \href{#method-Table-.widthWidestCellInRow}{\code{Table$.widthWidestCellInRow()}}
+\item \href{#method-Table-.widthWidestHeader}{\code{Table$.widthWidestHeader()}}
+\item \href{#method-Table-asString}{\code{Table$asString()}}
+\item \href{#method-Table-.titleForPrint}{\code{Table$.titleForPrint()}}
+\item \href{#method-Table-.headerForPrint}{\code{Table$.headerForPrint()}}
+\item \href{#method-Table-.footerForPrint}{\code{Table$.footerForPrint()}}
+\item \href{#method-Table-.rowForPrint}{\code{Table$.rowForPrint()}}
+\item \href{#method-Table-fromProtoBuf}{\code{Table$fromProtoBuf()}}
+\item \href{#method-Table-asProtoBuf}{\code{Table$asProtoBuf()}}
+\item \href{#method-Table-clone}{\code{Table$clone()}}
+}
+}
+\if{html}{\out{
+<details><summary>Inherited methods</summary>
+<ul>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id=".createImages"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-.createImages'><code>jmvcore::ResultsElement$.createImages()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id=".has"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-.has'><code>jmvcore::ResultsElement$.has()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id=".render"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-.render'><code>jmvcore::ResultsElement$.render()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id=".setKey"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-.setKey'><code>jmvcore::ResultsElement$.setKey()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id=".setName"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-.setName'><code>jmvcore::ResultsElement$.setName()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id=".setParent"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-.setParent'><code>jmvcore::ResultsElement$.setParent()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="get"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-get'><code>jmvcore::ResultsElement$get()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="getBoundVars"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-getBoundVars'><code>jmvcore::ResultsElement$getBoundVars()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="isNotFilled"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-isNotFilled'><code>jmvcore::ResultsElement$isNotFilled()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="print"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-print'><code>jmvcore::ResultsElement$print()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="resetVisible"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-resetVisible'><code>jmvcore::ResultsElement$resetVisible()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="saveAs"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-saveAs'><code>jmvcore::ResultsElement$saveAs()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setError"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setError'><code>jmvcore::ResultsElement$setError()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setRefs"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setRefs'><code>jmvcore::ResultsElement$setRefs()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setState"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setState'><code>jmvcore::ResultsElement$setState()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setStatus"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setStatus'><code>jmvcore::ResultsElement$setStatus()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setTitle"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setTitle'><code>jmvcore::ResultsElement$setTitle()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="jmvcore" data-topic="ResultsElement" data-id="setVisible"><a href='../../jmvcore/html/ResultsElement.html#method-ResultsElement-setVisible'><code>jmvcore::ResultsElement$setVisible()</code></a></span></li>
+</ul>
+</details>
+}}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Table-new"></a>}}
+\if{latex}{\out{\hypertarget{method-Table-new}{}}}
+\subsection{Method \code{new()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Table$new(
+  options,
+  name = NULL,
+  title = "no title",
+  visible = TRUE,
+  clearWith = "*",
+  refs = character(),
+  columns = list(),
+  rows = 0,
+  notes = list(),
+  swapRowsColumns = FALSE,
+  rowSelect = "",
+  sortSelect = ""
+)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Table-isFilled"></a>}}
+\if{latex}{\out{\hypertarget{method-Table-isFilled}{}}}
+\subsection{Method \code{isFilled()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Table$isFilled(col, rowNo, rowKey, excHidden = TRUE)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Table-getRefs"></a>}}
+\if{latex}{\out{\hypertarget{method-Table-getRefs}{}}}
+\subsection{Method \code{getRefs()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Table$getRefs(recurse = FALSE)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Table-.update"></a>}}
+\if{latex}{\out{\hypertarget{method-Table-.update}{}}}
+\subsection{Method \code{.update()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Table$.update()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Table-deleteRows"></a>}}
+\if{latex}{\out{\hypertarget{method-Table-deleteRows}{}}}
+\subsection{Method \code{deleteRows()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Table$deleteRows()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Table-addColumn"></a>}}
+\if{latex}{\out{\hypertarget{method-Table-addColumn}{}}}
+\subsection{Method \code{addColumn()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Table$addColumn(
+  name,
+  index = NA,
+  title = name,
+  superTitle = NULL,
+  visible = TRUE,
+  content = NULL,
+  type = "number",
+  format = "",
+  combineBelow = FALSE,
+  sortable = FALSE,
+  value = NA,
+  refs = character()
+)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Table-addRow"></a>}}
+\if{latex}{\out{\hypertarget{method-Table-addRow}{}}}
+\subsection{Method \code{addRow()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Table$addRow(rowKey, values = list())}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Table-addFormat"></a>}}
+\if{latex}{\out{\hypertarget{method-Table-addFormat}{}}}
+\subsection{Method \code{addFormat()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Table$addFormat(col, format, rowNo = NA, rowKey = NULL)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Table-setRow"></a>}}
+\if{latex}{\out{\hypertarget{method-Table-setRow}{}}}
+\subsection{Method \code{setRow()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Table$setRow(values, rowNo = NA, rowKey = NULL)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Table-getColumn"></a>}}
+\if{latex}{\out{\hypertarget{method-Table-getColumn}{}}}
+\subsection{Method \code{getColumn()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Table$getColumn(col)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Table-setCell"></a>}}
+\if{latex}{\out{\hypertarget{method-Table-setCell}{}}}
+\subsection{Method \code{setCell()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Table$setCell(col, value, rowNo = NA, rowKey = NULL)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Table-getCell"></a>}}
+\if{latex}{\out{\hypertarget{method-Table-getCell}{}}}
+\subsection{Method \code{getCell()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Table$getCell(col, rowNo = NA, rowKey = NULL)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Table-getRows"></a>}}
+\if{latex}{\out{\hypertarget{method-Table-getRows}{}}}
+\subsection{Method \code{getRows()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Table$getRows()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Table-getRow"></a>}}
+\if{latex}{\out{\hypertarget{method-Table-getRow}{}}}
+\subsection{Method \code{getRow()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Table$getRow(rowNo = NA, rowKey = NULL)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Table-addFootnote"></a>}}
+\if{latex}{\out{\hypertarget{method-Table-addFootnote}{}}}
+\subsection{Method \code{addFootnote()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Table$addFootnote(col, note, rowNo = NA, rowKey = NULL)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Table-addSymbol"></a>}}
+\if{latex}{\out{\hypertarget{method-Table-addSymbol}{}}}
+\subsection{Method \code{addSymbol()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Table$addSymbol(col, symbol, rowNo = NA, rowKey = NULL)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Table-setNote"></a>}}
+\if{latex}{\out{\hypertarget{method-Table-setNote}{}}}
+\subsection{Method \code{setNote()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Table$setNote(key, note, init = TRUE)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Table-setSortKeys"></a>}}
+\if{latex}{\out{\hypertarget{method-Table-setSortKeys}{}}}
+\subsection{Method \code{setSortKeys()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Table$setSortKeys(col, keys)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Table-.widthWidestCellInRow"></a>}}
+\if{latex}{\out{\hypertarget{method-Table-.widthWidestCellInRow}{}}}
+\subsection{Method \code{.widthWidestCellInRow()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Table$.widthWidestCellInRow(row)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Table-.widthWidestHeader"></a>}}
+\if{latex}{\out{\hypertarget{method-Table-.widthWidestHeader}{}}}
+\subsection{Method \code{.widthWidestHeader()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Table$.widthWidestHeader()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Table-asString"></a>}}
+\if{latex}{\out{\hypertarget{method-Table-asString}{}}}
+\subsection{Method \code{asString()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Table$asString(.folded = FALSE)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Table-.titleForPrint"></a>}}
+\if{latex}{\out{\hypertarget{method-Table-.titleForPrint}{}}}
+\subsection{Method \code{.titleForPrint()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Table$.titleForPrint()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Table-.headerForPrint"></a>}}
+\if{latex}{\out{\hypertarget{method-Table-.headerForPrint}{}}}
+\subsection{Method \code{.headerForPrint()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Table$.headerForPrint()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Table-.footerForPrint"></a>}}
+\if{latex}{\out{\hypertarget{method-Table-.footerForPrint}{}}}
+\subsection{Method \code{.footerForPrint()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Table$.footerForPrint()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Table-.rowForPrint"></a>}}
+\if{latex}{\out{\hypertarget{method-Table-.rowForPrint}{}}}
+\subsection{Method \code{.rowForPrint()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Table$.rowForPrint(i)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Table-fromProtoBuf"></a>}}
+\if{latex}{\out{\hypertarget{method-Table-fromProtoBuf}{}}}
+\subsection{Method \code{fromProtoBuf()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Table$fromProtoBuf(element, oChanges, vChanges)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Table-asProtoBuf"></a>}}
+\if{latex}{\out{\hypertarget{method-Table-asProtoBuf}{}}}
+\subsection{Method \code{asProtoBuf()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Table$asProtoBuf(incAsText = FALSE, status = NULL, includeState = TRUE)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Table-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-Table-clone}{}}}
+\subsection{Method \code{clone()}}{
+The objects of this class are cloneable with this method.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Table$clone(deep = FALSE)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{deep}}{Whether to make a deep clone.}
+}
+\if{html}{\out{</div>}}
+}
+}
+}
