@@ -16,7 +16,7 @@ knit_print.Table <- function(table, ...) {
         as.data.frame(table),
         col.names = col.names,
         row.names = FALSE,
-        caption = table$title
+        caption = paste(table$title, "{.jamovi}")
     )
     asis_output(paste(md, collapse = "\n"))
 }
@@ -31,19 +31,26 @@ knit_print.Image <- function(image, ...) {
 #' @method knit_print Group
 #' @export
 #' @importFrom knitr knit_print asis_output
-knit_print.Group <- function(group, ...) {
+knit_print.Group <- function(group, depth = 1, ...) {
     md <- unname(unlist(
         lapply(
             group$items,
             function(item) {
-                if (item$visible) knit_print(item)
+                if (item$visible) {
+                    if (inherits(item, c("Group", "Array"))) {
+                        knit_print.Group(item, depth = depth + 1)
+                    } else {
+                        knit_print(item)
+                    }
+                }
             }
         )
     ))
+    md <- c(paste(strrep("#", depth), group$title, "{.jamovi}"), md)
     asis_output(paste(md, collapse = "\n\n"))
 }
 
 #' @method knit_print Array
 #' @export
-#' @importFrom knitr knit_print
+#' @importFrom knitr knit_print asis_output
 knit_print.Array <- knit_print.Group
