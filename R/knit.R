@@ -25,7 +25,13 @@ knit_print.Table <- function(table, ...) {
 #' @export
 #' @importFrom knitr knit_print
 knit_print.Image <- function(image, ...) {
-    'Image goes here'
+    filename <- tempfile(
+        fileext = ".svg",
+        tmpdir = knitr::opts_chunk$get("fig.path")
+    )
+    image$saveAs(filename)
+    width <- image$width %||% (knitr::opts_chunk$get("fig.width") * 96)
+    asis_output(paste0("![](", filename, "){.jamovi width=", width, "}\n\n"))
 }
 
 #' @method knit_print Group
