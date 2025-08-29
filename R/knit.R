@@ -3,6 +3,7 @@
 #' @export
 #' @importFrom knitr asis_output kable
 knit_print.Table <- function(table, ...) {
+    table <- jmvcore:::fold(table)
     col.names <- unname(unlist(
         lapply(
             table$columns,
