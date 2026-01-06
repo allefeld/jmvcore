@@ -1,0 +1,32 @@
+section.jamovi-h1 {
+  font-family: Arial, sans-serif;
+  color: #333333;
+  font-size: 12px;
+}
+:is(h1, h2, h3, h4, h5, h6).jamovi-h1 {
+  all: revert;
+  font-size: 160%;
+  color: #3E6DA9;
+  margin-bottom: 12px;
+  white-space: nowrap;
+}
+:is(h1, h2, h3, h4, h5, h6).jamovi-h2 {
+  all: revert;
+  font-size: 130%;
+  margin-bottom: 12px;
+  color: #3E6DA9;
+}
+:is(h1, h2, h3, h4, h5, h6).jamovi-h3,
+:is(h1, h2, h3, h4, h5, h6).jamovi-h4,
+:is(h1, h2, h3, h4, h5, h6).jamovi-h5 {
+  all: revert;
+  font-size: 110%;
+  margin-bottom: 12px;
+}
+.jamovi-table {
+  overflow-x: auto;
+}
+.jamovi-table table {
+  border-spacing: 0;
+  page-break-inside: avoid;
+}

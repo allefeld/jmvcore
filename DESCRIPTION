@@ -10,6 +10,7 @@ Description: A framework for creating rich interactive analyses for the jamovi
 URL: https://www.jamovi.org
 BugReports: https://github.com/jamovi/jmvcore/issues
 License: GPL (>= 2)
+Encoding: UTF-8
 ByteCompile: yes
 Depends:
     R (>= 3.2)
@@ -22,6 +23,8 @@ Suggests:
     testthat (>= 1.0.2),
     RProtoBuf,
     knitr,
+    flextable,
+    ftExtra,
     ggplot2,
     RColorBrewer,
     ragg,
